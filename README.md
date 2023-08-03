@@ -8,7 +8,7 @@ Antes de mais nada, processo padrão, instale as dependências do projeto com o 
 
 Após instaladas as dependências, para rodar o projeto é simples, basta ir na pasta raiz dele e executar o comando `ng-serve` que irá iniciar o frontend na porta `http://localhost:4200/`.
 
-Para executar a 'api' basta it na pasta raiz do projeto e executar o comando `json-server --watch db.json`, garanta que está executando o comando pasta raiz de fato, onde está localizado o arquivo `db.json`.
+Para executar a 'api' basta ir na pasta raiz do projeto e executar o comando `json-server --watch db.json`, garanta que está executando o comando pasta raiz de fato, onde está localizado o arquivo `db.json`.
 
 ## Observações
 
