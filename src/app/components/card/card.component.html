@@ -1,0 +1,49 @@
+<div class="card flex justify-content-center">
+  <p-card
+    header="{{ this.data.name }}"
+    [style]="{ width: '360px', 'margin-left': '20px', 'margin-top': '10%' }"
+  >
+    <i *ngIf="this.status == 1" class="pi pi-circle-fill" style="color: red">
+      Fora de estoque!</i
+    >
+    <i
+      *ngIf="this.status == 2"
+      class="pi pi-circle-fill"
+      style="color: rgb(255, 174, 0)"
+    >
+      Estoque baixo</i
+    >
+    <i *ngIf="this.status == 3" class="pi pi-circle-fill" style="color: green">
+      Disponível!</i
+    >
+    <p>
+      {{ this.data.description }}
+    </p>
+    <div class="inline-flex">
+      <p>Qty: {{ this.data.quantity }}</p>
+      <p style="margin-left: 20px">R$ {{ this.data.value }}</p>
+      <p style="margin-left: 20px">$ {{ this.dolarValue }}</p>
+    </div>
+    <div class="flex justify-content-end" *ngIf="this.buyButton">
+      <p-button
+        *ngIf="this.status == 1"
+        icon="pi pi-shopping-cart"
+        styleClass="p-button-rounded p-button-danger p-button-text"
+        [disabled]="true"
+        (onClick)="buy()"
+      ></p-button>
+      <p-button
+        *ngIf="this.status == 2"
+        icon="pi pi-shopping-cart"
+        styleClass="p-button-rounded p-button-warning p-button-text"
+        (onClick)="buy()"
+      ></p-button>
+      <p-button
+        *ngIf="this.status == 3"
+        icon="pi pi-shopping-cart"
+        styleClass="p-button-rounded p-button-success p-button-text"
+        (onClick)="buy()"
+      ></p-button>
+    </div>
+  </p-card>
+</div>

@@ -1,0 +1,47 @@
+{
+  "user": [
+    {
+      "email": "admin@gmail.com",
+      "password": "abc123",
+      "name": "Admin User",
+      "id": 1
+    }
+  ],
+  "category": [
+    {
+      "name": "Comida",
+      "id": 1
+    },
+    {
+      "name": "Limpeza",
+      "id": 2
+    },
+    {
+      "name": "Jogos",
+      "id": 3
+    },
+    {
+      "name": "Filme",
+      "id": 4
+    },
+    {
+      "name": "Estudo",
+      "id": 5
+    }
+  ],
+  "product": [
+    {
+      "name": "Ps5",
+      "description": "Vídeo Game",
+      "value": 4500,
+      "category": {
+        "name": "Jogos",
+        "id": 3
+      },
+      "quantity": 15,
+      "nameSeler": "Admin User",
+      "id": 1
+    }
+  ],
+  "sale": []
+}

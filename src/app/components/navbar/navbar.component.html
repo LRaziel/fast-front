@@ -1,0 +1,11 @@
+<div class="card" *ngIf="isShow">
+  <p-menubar [model]="items">
+    <ng-template pTemplate="end">
+      <p-button
+        icon="pi pi-sign-out"
+        styleClass="p-button-rounded p-button-danger p-button-text"
+        (onClick)="logout()"
+      ></p-button>
+    </ng-template>
+  </p-menubar>
+</div>

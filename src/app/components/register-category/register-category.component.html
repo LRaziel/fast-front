@@ -1,0 +1,27 @@
+<div class="flex justify-content-center">
+  <h2>{{ title }}</h2>
+</div>
+<div class="surface-card p-4 shadow-2 border-round col-4 col-offset-4">
+  <form class="formgrid grid" [formGroup]="categoryform">
+    <div class="field col-12 md:col-12">
+      <label for="name" class="block text-900 font-medium mb-2"
+        >Nome da Categoria</label
+      >
+      <input
+        id="name"
+        type="text"
+        placeholder="Entre com o nome da categoria..."
+        pInputText
+        class="w-full mb-3"
+        formControlName="name"
+      />
+    </div>
+  </form>
+  <p-button
+    label="Cadastrar"
+    icon="pi pi-check"
+    styleClass="p-button-rounded"
+    class="flex justify-content-center"
+    (onClick)="proceedregister()"
+  ></p-button>
+</div>

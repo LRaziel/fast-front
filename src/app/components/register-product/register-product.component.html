@@ -1,0 +1,80 @@
+<div class="flex justify-content-center">
+  <h2>{{ title }}</h2>
+</div>
+<div class="surface-card p-4 shadow-2 border-round col-4 col-offset-4">
+  <form class="formgrid grid" [formGroup]="productform">
+    <div class="field col-12 md:col-12">
+      <label for="name" class="block text-900 font-medium mb-2"
+        >Nome do Produto</label
+      >
+      <input
+        id="name"
+        type="text"
+        placeholder="Entre com o nome do produto..."
+        pInputText
+        class="w-full mb-3"
+        formControlName="name"
+      />
+    </div>
+
+    <div class="field col-12">
+      <label for="description" class="block text-900 font-medium mb-2"
+        >Descrição do Produto</label
+      >
+      <textarea
+        rows="5"
+        class="w-full mb-3"
+        pInputTextarea
+        formControlName="description"
+      ></textarea>
+    </div>
+    <div class="field col-12 md:col-12">
+      <label for="category" class="block text-900 font-medium mb-2"
+        >Categoria do Produto</label
+      >
+      <p-dropdown
+        id="category"
+        formControlName="category"
+        [options]="categoriesList"
+        optionLabel="name"
+        autoWidth="false"
+        [style]="{ width: '100%' }"
+      ></p-dropdown>
+    </div>
+
+    <div class="field col-12 md:col-6">
+      <label for="value" class="block text-900 font-medium mb-2"
+        >Valor do Produto</label
+      >
+      <p-inputNumber
+        formControlName="value"
+        id="value"
+        mode="currency"
+        currency="BRL"
+        locale="pt-BR"
+        autoWidth="false"
+        [style]="{ width: '200px' }"
+      >
+      </p-inputNumber>
+    </div>
+    <div class="field col-12 md:col-6">
+      <label for="value" class="block text-900 font-medium mb-2"
+        >Quantidade do Produto</label
+      >
+      <p-inputNumber
+        id="quantity"
+        formControlName="quantity"
+        autoWidth="false"
+        [style]="{ width: '200px' }"
+      ></p-inputNumber>
+    </div>
+  </form>
+  <p-button
+    label="Cadastrar"
+    icon="pi pi-check"
+    styleClass="p-button-rounded"
+    class="flex justify-content-center"
+    (onClick)="proceedregister()"
+    [style]="{ 'margin-top': '5px' }"
+  ></p-button>
+</div>

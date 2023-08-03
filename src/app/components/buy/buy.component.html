@@ -1,0 +1,80 @@
+<div class="flex justify-content-center">
+  <h2>{{ title }} - {{ this.selectedProduct.name }}</h2>
+</div>
+<div class="card" style="display: flex; justify-content: center">
+  <p-splitter
+    [panelSizes]="[25, 75]"
+    [style]="{ height: '400px', width: '1000px', 'margin-top': '5%' }"
+    styleClass="mb-5"
+  >
+    <ng-template pTemplate>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 10px;
+        "
+      >
+        <app-card pp-card [data]="this.selectedProduct">
+          [buyButton]="false"
+        </app-card>
+      </div>
+    </ng-template>
+    <ng-template pTemplate>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 10px;
+        "
+      >
+        <form class="formgrid grid" [formGroup]="buyForm">
+          <div class="field col-12 md:col-6">
+            <label for="name" class="block text-900 font-medium mb-2"
+              >Nome do Comprador</label
+            >
+            <input
+              formControlName="name"
+              id="name"
+              type="text"
+              placeholder="Insira seu nome..."
+              pInputText
+              class="w-full mb-3"
+            />
+          </div>
+          <div class="field col-12 md:col-6">
+            <label for="value" class="block text-900 font-medium mb-2"
+              >Quantidade desejada</label
+            >
+            <p-inputNumber
+              formControlName="quantity"
+              id="qty"
+              autoWidth="false"
+              [min]="0"
+              [max]="this.selectedProduct.quantity"
+              [style]="{ width: '280px' }"
+            >
+            </p-inputNumber>
+          </div>
+        </form>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: flex-end;
+          margin-bottom: 20px;
+          margin-right: 20px;
+        "
+      >
+        <p-button
+          icon="pi pi-check"
+          styleClass="p-button-rounded p-button-success p-button-outlined"
+          class="flex justify-content-end"
+          (onClick)="onBuy()"
+        ></p-button>
+      </div>
+    </ng-template>
+  </p-splitter>
+</div>

@@ -1,27 +1,15 @@
-# FastFront
+# FastFront - Stock "App"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+Esse projeto foi feito para participar da seleção do instituto IATECAM. O front foi feito usando angular e o framework de estilo primeNG. A api foi simulada através do uso do json-server, conforme alinhado com o analista do instituto 'Gabriel Batista'. Espero que esteja do agrado de todos, acabei não conseguindo fazer toda a demanda do desafio por questão de tempo, faltando a parte do dashboard, mas as demais estão funcionais e prontas para teste. Mais uma vez, muito obrigado pela oportunidade de participar do desafio, fico no aguardo dos feedbacks e, se possível, de boas notícias!
 
-## Development server
+## Executando o projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de mais nada, processo padrão, instale as dependências do projeto com o `npm install`.
 
-## Code scaffolding
+Após instaladas as dependências, para rodar o projeto é simples, basta ir na pasta raiz dele e executar o comando `ng-serve` que irá iniciar o frontend na porta `http://localhost:4200/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para executar a 'api' basta it na pasta raiz do projeto e executar o comando `json-server --watch db.json`, garanta que está executando o comando pasta raiz de fato, onde está localizado o arquivo `db.json`.
 
-## Build
+## Observações
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+O `json-api` simula uma api com o uso de um arquivo json, caso queiram, podem manipular as informações diretamente no arquivo json, mas sempre se mantendo atento ao padrão dos dados. Para login no primeiro momento, já vai um usuário admin padrão, suas informações podem ser vistas no arquivo `db.json` na parte de `user`, mas caso prefira, pode estar criando seu próprio usuário em tempo real.

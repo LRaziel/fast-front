@@ -1,0 +1,51 @@
+<form class="grid" [formGroup]="credential">
+  <div
+    class="surface-card p-4 shadow-2 border-round col-4 col-offset-4"
+    style="margin-top: 10%"
+  >
+    <div class="text-center mb-5">
+      <img src="../../../assets/avatar-svgrepo-com.svg" height="50" />
+      <div class="text-900 text-3xl font-medium mb-3">Seja bem-vindo!</div>
+      <span class="text-600 font-medium line-height-3"
+        >Não tem uma conta ainda?</span
+      >
+      <a
+        class="font-medium no-underline ml-2 text-blue-500 cursor-pointer"
+        href="/register"
+        >Clique para criar uma!</a
+      >
+    </div>
+
+    <div>
+      <label for="email1" class="block text-900 font-medium mb-2">Email</label>
+      <input
+        id="email"
+        type="text"
+        placeholder="Digite seu email..."
+        pInputText
+        class="w-full mb-3"
+        formControlName="email"
+      />
+
+      <label for="password1" class="block text-900 font-medium mb-2"
+        >Senha</label
+      >
+      <input
+        id="password"
+        type="password"
+        placeholder="Digite sua senha..."
+        pInputText
+        class="w-full mb-3"
+        formControlName="pssw"
+      />
+
+      <p-button
+        label="Acessar"
+        icon="pi pi-user"
+        styleClass="p-button-rounded"
+        class="flex justify-content-center"
+        (onClick)="onFormSubmit()"
+      ></p-button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,36 @@
+<div class="body">
+  <p-toolbar>
+    <div class="p-toolbar-group-start" [formGroup]="searchform">
+      <p-dropdown
+        id="category"
+        placeholder="Selecione uma categoria"
+        formControlName="category"
+        optionLabel="name"
+        [options]="categoriesList"
+        autoWidth="false"
+        [style]="{ 'margin-left': '5px' }"
+      ></p-dropdown>
+      <input
+        pInputText
+        type="text"
+        placeholder="Entre com a descrição"
+        formControlName="description"
+        [style]="{ 'margin-left': '20px', width: '500px' }"
+      />
+      <p-button
+        icon="pi pi-search"
+        styleClass="p-button-rounded p-button-success p-button-text"
+        [style]="{ 'margin-left': '20px' }"
+        (onClick)="search()"
+      ></p-button>
+    </div>
+  </p-toolbar>
+  <div class="flex flex-wrap justify-content-center">
+    <app-card
+      pp-card
+      *ngFor="let item of this.products"
+      [data]="item"
+      [buyButton]="true"
+    ></app-card>
+  </div>
+</div>
